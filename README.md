@@ -29,6 +29,16 @@ Create a .env.local file:
 MONGODB_URI=your_mongodb_connection_string
 
 NEXT_PUBLIC_HOST=your web link
+---
+## 🚀 Website Preview
+
+[Homepage Screenshot](public/Page-1.png)
+
+
+[Dashboard Screenshot](public/Page-2.png)
+
+
+[User_page Screenshot](public/Page-3.png)
 
 ## 📦 Installation
 
