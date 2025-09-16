@@ -2,11 +2,16 @@
 import { useState, useEffect } from "react"
 import { toast, ToastContainer } from "react-toastify"
 import { notFound } from "next/navigation"
+import QR from "@/components/QR"
+import { use } from 'react';
 
 export default function Page({ params }) {
   const [item, setItem] = useState(null)
-  const handle = params.handle
+  const [url, setUrl] = useState('');
+  const { handle } = use(params);
+  
   useEffect(() => {
+    setUrl(`${process.env.NEXT_PUBLIC_HOST}/api/getdata?handle=${handle}`)
     async function fetchData() {
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getdata?handle=${handle}`)
@@ -50,6 +55,7 @@ export default function Page({ params }) {
         </a>
       ))}
     </div>
+    {url && <QR value={url}/>}
   </div>
 </div>
   )
