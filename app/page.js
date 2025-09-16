@@ -14,9 +14,9 @@ export default function Home() {
     router.push(`/generate?handle=${text}`)
   }
   return (
-    <main>
-      <section className="bg-[#254f1a] min-h-[100vh] grid grid-cols-2">
-        <div className="flex justify-center flex-col ml-[10vw] gap-3">
+    <main className="">
+      <section className="bg-[#254f1a] min-h-[100vh] grid grid-cols-2 pt-[10vh]">
+        <div className="flex justify-center flex-col md:ml-[10vw] gap-3">
           <p className="text-yellow-300 font-bold text-5xl">Everything you </p>
           <p className="text-yellow-300 font-bold text-5xl">are. In one,</p>
           <p className="text-yellow-300 font-bold text-5xl">simple link in bio.</p>

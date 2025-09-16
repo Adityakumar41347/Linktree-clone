@@ -6,7 +6,6 @@ import { notFound } from "next/navigation"
 export default function Page({ params }) {
   const [item, setItem] = useState(null)
   const handle = params.handle
-
   useEffect(() => {
     async function fetchData() {
       try {
@@ -30,9 +29,7 @@ export default function Page({ params }) {
   const editcard=()=>{
 
   }
-
   if (!item) return null // or a loading spinner
-
   return (
     <div className="flex min-h-screen bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-800 justify-center items-start py-16 px-4 animate-fade-in">
   <ToastContainer />
@@ -44,7 +41,6 @@ export default function Page({ params }) {
     />
     <span className="font-extrabold text-3xl text-white tracking-wide animate-fade-in-delay">@{item.handle}</span>
     <span className="desc text-center text-white/90 text-base italic animate-fade-in-delay-2">{item.desc}</span>
-
     <div className="links w-full mt-4 space-y-4">
       {item.links.map((linkItem, index) => (
         <a key={linkItem.link || index} href={linkItem.link} target="_blank" rel="noopener noreferrer">
@@ -54,8 +50,6 @@ export default function Page({ params }) {
         </a>
       ))}
     </div>
-
-    
   </div>
 </div>
   )
